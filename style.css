@@ -5,6 +5,7 @@ body {
   color: #e5e7eb;
 }
 
+/* Header */
 .header {
   text-align: center;
   padding: 40px 20px;
@@ -19,20 +20,22 @@ body {
   margin-bottom: 15px;
 }
 
-button {
+.contact-btn {
+  display: inline-block;
+  margin-top: 15px;
   padding: 10px 20px;
-  border: none;
   background: #38bdf8;
   color: #020617;
-  font-size: 16px;
+  text-decoration: none;
   border-radius: 6px;
-  cursor: pointer;
+  font-weight: bold;
 }
 
-button:hover {
+.contact-btn:hover {
   background: #0ea5e9;
 }
 
+/* Subheader */
 .subheader {
   text-align: center;
   padding: 20px;
@@ -40,29 +43,70 @@ button:hover {
   border-bottom: 1px solid #1e293b;
 }
 
+/* Sections */
 .section {
-  padding: 40px 20px;
   max-width: 900px;
   margin: auto;
+  padding: 40px 20px;
 }
 
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* Cards */
 .card {
   background: #1e293b;
   padding: 20px;
-  margin-bottom: 20px;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-.card a {
-  color: #38bdf8;
+.card ul {
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* Projects */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+.project-links a {
+  padding: 6px 12px;
+  background: #38bdf8;
+  color: #020617;
   text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
+.project-links a:hover {
+  background: #0ea5e9;
+}
+
+/* Skills */
 .skills-list {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
 }
 
@@ -72,14 +116,12 @@ button:hover {
   border-radius: 6px;
   text-align: center;
 }
- /* for the experiences */
-.card ul {
-  margin-top: 10px;
-  padding-left: 20px;
+
+/* Links */
+a {
+  color: #38bdf8;
 }
 
-.card li {
-  margin-bottom: 6px;
-  line-height: 1.5;
+a:hover {
+  text-decoration: underline;
 }
-
