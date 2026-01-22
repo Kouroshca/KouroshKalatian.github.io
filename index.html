@@ -13,14 +13,31 @@
     }
   </style>
 </head>
+<script>
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+</script>
 <body>
 
   <!-- ============ HEADER ============ -->
   <header class="header">
-    <img src="images/profile.jpg" alt="Kourosh Kalatian" class="profile-pic">
-    <h1>Kourosh Kalatian</h1>
-    <a href="#contact" class="contact-btn">📞 Contact Me</a>
+    <header class="header">
+      <img src="images/profile.jpg" alt="Kourosh Kalatian" class="profile-pic">
+      <h1>Kourosh Kalatian</h1>
+      <a href="#contact" class="contact-btn">📞 Contact Me</a>
+    </header>
   </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      
+    </ul>
+  </nav>
 
   <!-- ============ SUBHEADER ============ -->
   <section class="subheader">
