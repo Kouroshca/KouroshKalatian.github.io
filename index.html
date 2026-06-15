@@ -4,51 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kourosh Kalatian | Portfolio</title>
-
   <link rel="stylesheet" href="style.css">
-
   <style>
-    html {
-      scroll-behavior: smooth;
+    html { scroll-behavior: smooth; }
+
+    .section-divider {
+      max-width: 900px;
+      margin: 0 auto 10px auto;
+      padding: 0 20px;
+    }
+
+    .section-divider h3 {
+      font-size: 1.1rem;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-left: 3px solid #38bdf8;
+      padding-left: 12px;
+      margin-bottom: 0;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .badge {
+      background: #0f3460;
+      color: #38bdf8;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .badge-green {
+      background: #0f3d2e;
+      color: #34d399;
     }
   </style>
 </head>
+
 <script>
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
+  window.onbeforeunload = function () { window.scrollTo(0, 0); };
 </script>
+
 <body>
 
   <!-- ============ HEADER ============ -->
   <header class="header">
-      <img src="images/profile.jpg" alt="Kourosh Kalatian" class="profile-pic">
-      <h1>Kourosh Kalatian</h1>
-      <a href="#contact" class="contact-btn">📞 Contact Me</a>
+    <img src="images/profile.jpg" alt="Kourosh Kalatian" class="profile-pic">
+    <h1>Kourosh Kalatian</h1>
+    <a href="#contact" class="contact-btn">📞 Contact Me</a>
   </header>
 
   <nav class="navbar">
     <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#certificates">Certificates</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#languages">Languages</a></li>
-    <li><a href="#contact">Contact</a></li>
-
-      
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- ============ SUBHEADER ============ -->
   <section class="subheader">
-    <h2>Junior Software Developer | Python · C++ · AI/ML · Cybersecurity</h2>
-    <p>
-
-      I build real-world software systems — from AI-powered applications and cybersecurity blue-team tools to gameplay systems and interactive experiences,
-      all with live demos and full implementations.</p>
+    <h2>IT Support & Cybersecurity Graduate | Python · Splunk · SOC · Help Desk</h2>
+    <p>Building real security tools — from live network intrusion detection systems to SOC playbook assistants — with working demos and full implementations.</p>
   </section>
 
   <!-- ============ ABOUT ME ============ -->
@@ -56,32 +85,86 @@
     <h2>About Me</h2>
     <div class="card">
       <p>
-        I'm a Game Programming graduate from George Brown College with a strong foundation in software engineering
-        covering algorithms, OOP, system design, and full SDLC.
+        Cybersecurity and IT graduate from George Brown College (Advanced Diploma, 3.32 GPA) actively seeking junior IT Help Desk and SOC Analyst roles.
       </p>
-      Alongside game development,I've built AI-powered applications and security tools using Python, 
-      Scikit-learn, and Streamlit. I hold a Google Cybersecurity Certificate and have hands-on experience developing a SOC Playbook Assistant that maps threats
-      to MITRE ATT&CK frameworks. I enjoy solving real-world problems through clean, logical code and I'm actively seeking software development or cybersecurity internships where I can grow as an engineer.
       <p>
-       
+        I have hands-on experience in technical troubleshooting, hardware/software support, and security tooling. I built a Python-based Intrusion Detection System with live Scapy packet capture and a Splunk SIEM pipeline — not a tutorial, a working tool. I also built SOC Buddy, a playbook assistant with MITRE ATT&CK mapping for Tier 1 triage workflows.
       </p>
+      <p>
+        Beyond cybersecurity, I have a strong software development background across Python, C++, C#, SQL, and JavaScript, with shipped projects ranging from ML classifiers to full game systems.
+      </p>
+      <div class="badge-row">
+        <span class="badge">Google Cybersecurity Certificate</span>
+        <span class="badge">Splunk (Splunk Education)</span>
+        <span class="badge">TryHackMe SOC Level 1</span>
+        <span class="badge">Kaggle – Pandas</span>
+      </div>
+      <div class="badge-row" style="margin-top:8px;">
+        <span class="badge-green badge">Open to Junior Roles & Internships</span>
+        <span class="badge-green badge">No Enrollment Required</span>
+      </div>
     </div>
   </section>
 
+  <!-- ============ PROJECTS ============ -->
   <section id="projects" class="section">
     <h2>Projects</h2>
-  
-    <!-- Spam detection -->
+
+    <!-- ── Cybersecurity & AI ── -->
+    <div class="section-divider">
+      <h3>Cybersecurity & AI Projects</h3>
+    </div>
+
+    <!-- IDS Project -->
+    <div class="card project-card">
+      <img src="images/PythonIDS-Splunk copy.png" alt="Python Intrusion Detection System" class="project-img" />
+      <h3>Python Intrusion Detection System with Splunk Cloud</h3>
+      <p><strong>Python, Scapy, Splunk Cloud, SPL, HEC, Git</strong></p>
+      <p>
+        Real-time network IDS that captures live traffic, detects cyber threats, and ships structured alerts to Splunk Cloud for SOC-style monitoring.
+      </p>
+      <ul>
+        <li>Captured and analyzed live network packets using Scapy</li>
+        <li>Detected port scans, brute force SSH attempts, and SYN flood patterns</li>
+        <li>Engineered a log ingestion pipeline via Splunk HTTP Event Collector processing 1,875+ live events</li>
+        <li>Built SPL dashboards visualizing alert classification and top attacker IPs</li>
+        <li>Secured credentials via environment variables and version controlled on GitHub</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://github.com/Kouroshca/python-ids-splunk" class="btn btn-github" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <!-- SOC Playbook Agent -->
+    <div class="card project-card">
+      <img src="images/SOCBuddy.png" alt="SOC Playbook Assistant" class="project-img" />
+      <h3>SOC Playbook Assistant (Threat Response Agent)</h3>
+      <p><strong>Python, Streamlit, JSON, Regex</strong></p>
+      <p>
+        Security operations tool that analyzes alerts/logs and generates structured incident response playbooks for SOC analysts.
+      </p>
+      <ul>
+        <li>Built a rule-based classification system for detecting threats (brute force, phishing, malware)</li>
+        <li>Extracted key entities such as IP addresses and usernames from unstructured logs</li>
+        <li>Implemented severity scoring and MITRE ATT&CK mapping for standardized analysis</li>
+        <li>Designed playbook engine delivering step-by-step remediation actions</li>
+        <li>Developed interactive Streamlit interface to simulate real SOC workflows</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://socbuddy.streamlit.app" class="btn btn-live" target="_blank">Live Demo</a>
+        <a href="https://github.com/Kouroshca/SOC_Buddy" class="btn btn-github" target="_blank">GitHub</a>
+        <a href="https://youtu.be/4xWnWzarofk" class="btn btn-youtube" target="_blank">YouTube</a>
+      </div>
+    </div>
+
+    <!-- Spam Detection -->
     <div class="card project-card">
       <img src="images/Spam.png" alt="Spam Detection System" class="project-img" />
-  
       <h3>AI-Powered Spam Detection System</h3>
       <p><strong>Python, Pandas, Scikit-learn, Streamlit</strong></p>
-  
       <p>
         Machine learning system that classifies real-world messages as spam or legitimate with a live prediction interface.
       </p>
-  
       <ul>
         <li>Built using Python, Pandas, and Scikit-learn</li>
         <li>Implemented TF-IDF vectorization and Naive Bayes classification</li>
@@ -89,7 +172,6 @@
         <li>Developed Streamlit interface for real-time predictions</li>
         <li>Tested and optimized model performance</li>
       </ul>
-  
       <div class="project-links">
         <a href="https://spam-detector-by-kouroshka.streamlit.app/" class="btn btn-live" target="_blank">Live Demo</a>
         <a href="https://github.com/Kouroshca/Task_Scheduler/tree/main/Threat_Intelligence" class="btn btn-github" target="_blank">GitHub</a>
@@ -97,330 +179,285 @@
       </div>
     </div>
 
-    <!-- IDS Project -->
-<div class="card project-card">
-  <img src="images/PythonIDS-Splunk copy.png" alt="Python Intrusion Detection System" class="project-img" />
-  <h3>Python Intrusion Detection System with Splunk Cloud</h3>
-  <p><strong>Python, Scapy, Splunk Cloud, SPL, HEC, Git</strong></p>
-  <p>
-    Real-time network IDS that captures live traffic, detects cyber threats, 
-    and ships structured alerts to Splunk Cloud for SOC-style monitoring.
-  </p>
-  <ul>
-    <li>Captured and analyzed live network packets using Scapy</li>
-    <li>Detected port scans, brute force SSH attempts, and SYN flood patterns</li>
-    <li>Engineered a log ingestion pipeline via Splunk HTTP Event Collector processing 1,875+ live events</li>
-    <li>Built SPL dashboards visualizing alert classification and top attacker IPs</li>
-    <li>Secured credentials via environment variables and version controlled on GitHub</li>
-  </ul>
-  <div class="project-links">
-    <a href="https://github.com/Kouroshca/python-ids-splunk" class="btn btn-github" target="_blank">GitHub</a>
-  </div>
-</div>
+    <!-- BMI -->
+    <div class="card project-card">
+      <img src="images/BMI.png" alt="BMI Calculator" class="project-img" />
+      <h3>Intelligent BMI & Nutrition Recommendation System</h3>
+      <p><strong>Python, Streamlit, Data Analysis</strong></p>
+      <p>
+        Data-driven application that analyzes BMI and generates personalized nutrition recommendations.
+      </p>
+      <ul>
+        <li>Built using Python and Streamlit</li>
+        <li>Implemented BMI calculation and health classification logic</li>
+        <li>Designed rule-based recommendation system</li>
+        <li>Added input validation and error handling</li>
+        <li>Created real-time interactive interface</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://kourosh-bmical.streamlit.app" target="_blank" class="btn btn-live">Live Demo</a>
+        <a href="https://github.com/Kouroshca/Task_Scheduler" class="btn btn-github">GitHub</a>
+        <a href="https://www.youtube.com/watch?v=IwJ52NWwKuE" class="btn btn-youtube" target="_blank">YouTube</a>
+      </div>
+    </div>
 
-    <!-- SOC Playbook Agent -->
-<div class="card project-card">
-  <img src="images/SOCBuddy.png" alt="SOC Playbook Assistant" class="project-img" />
+    <!-- ── Game Development ── -->
+    <div class="section-divider" style="margin-top: 20px;">
+      <h3>Game Development Projects</h3>
+    </div>
 
-  <h3>SOC Playbook Assistant (Threat Response Agent)</h3>
-  <p><strong>Python, Streamlit, JSON, Regex</strong></p>
+    <!-- QBert -->
+    <div class="card project-card">
+      <img src="images/qbert.png" alt="QBert Game" class="project-img" />
+      <h3>QBert – Arcade Game Recreation</h3>
+      <p><strong>Unity, C#</strong></p>
+      <p>Recreation of the classic QBert arcade game with interactive mechanics and enemy behaviors.</p>
+      <ul>
+        <li>Implemented grid-based movement system</li>
+        <li>Developed enemy AI and player interactions</li>
+        <li>Added scoring and game progression logic</li>
+        <li>Tested and debugged gameplay systems</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://kouroshca.itch.io/qbert" class="btn btn-live" target="_blank">Live Demo</a>
+        <a href="https://github.com/Kouroshca/QBert_Game" class="btn btn-github" target="_blank">GitHub</a>
+      </div>
+    </div>
 
-  <p>
-    Security operations tool that analyzes alerts/logs and generates structured incident response playbooks for SOC analysts.
-  </p>
-
-  <ul>
-    <li>Built a rule-based classification system for detecting threats (brute force, phishing, malware)</li>
-    <li>Extracted key entities such as IP addresses and usernames from unstructured logs</li>
-    <li>Implemented severity scoring and MITRE ATT&CK mapping for standardized analysis</li>
-    <li>Designed playbook engine delivering step-by-step remediation actions</li>
-    <li>Developed interactive Streamlit interface to simulate real SOC workflows</li>
-  </ul>
-
-  <div class="project-links">
-    <a href="https://socbuddy.streamlit.app" class="btn btn-live" target="_blank">Live Demo</a>
-    <a href="https://github.com/Kouroshca/SOC_Buddy" class="btn btn-github" target="_blank">GitHub</a>
-    <a href="https://youtu.be/4xWnWzarofk" class="btn btn-youtube" target="_blank">YouTube</a>
-  </div>
-</div>
-  
- <!-- BMI -->
- <div class="card project-card">
-  <img src="images/BMI.png" alt="BMI Calculator" class="project-img" />
-
-  <h3>Intelligent BMI & Nutrition Recommendation System</h3>
-  <p><strong>Python, Streamlit, Data Analysis</strong></p>
-
-  <p>
-    Data-driven application that analyzes BMI and generates personalized nutrition recommendations.
-  </p>
-
-  <ul>
-    <li>Built using Python and Streamlit</li>
-    <li>Implemented BMI calculation and health classification logic</li>
-    <li>Designed rule-based recommendation system</li>
-    <li>Added input validation and error handling</li>
-    <li>Created real-time interactive interface</li>
-  </ul>
-
-  <div class="project-links">
-    <a href="https://kourosh-bmical.streamlit.app" target="_blank" class="btn btn-live">Live Demo</a>
-    <a href="https://github.com/Kouroshca/Task_Scheduler" class="btn btn-github">GitHub</a>
-    <a href="https://www.youtube.com/watch?v=IwJ52NWwKuE" class="btn btn-youtube" target="_blank">YouTube</a>
-  </div>
-</div>
-
-<!-- QBert -->
-<div class="card project-card">
-  <img src="images/qbert.png" alt="QBert Game" class="project-img" />
-
-  <h3>QBert – Arcade Game Recreation</h3>
-  <p><strong>Unity, C#</strong></p>
-
-  <p>
-    Recreation of the classic QBert arcade game with interactive mechanics and enemy behaviors.
-  </p>
-
-  <ul>
-    <li>Implemented grid-based movement system</li>
-    <li>Developed enemy AI and player interactions</li>
-    <li>Added scoring and game progression logic</li>
-    <li>Tested and debugged gameplay systems</li>
-  </ul>
-
-  <div class="project-links">
-    <a href="https://kouroshca.itch.io/qbert" class="btn btn-live" target="_blank">Live Demo</a>
-    <a href="https://github.com/Kouroshca/QBert_Game" class="btn btn-github" target="_blank">GitHub</a>
-  </div>
-</div>
-
-<!-- RPG -->
-<div class="card project-card">
-  <img src="images/RPG_Game.png" alt="RPG Game" class="project-img" />
-
-  <h3>Simple RPG Game</h3>
-  <p><strong>Unity, C#</strong></p>
-
-  <p>
-    RPG-style game featuring combat, inventory systems, and basic AI-driven enemies.
-  </p>
-
-  <ul>
-    <li>Implemented combat mechanics and player stats system</li>
-    <li>Built inventory and interaction systems</li>
-    <li>Developed basic enemy AI behavior</li>
-    <li>Debugged and tested gameplay features</li>
-  </ul>
-
-  <div class="project-links">
-    <a href="https://kouroshca.itch.io/game-3023-term-project" class="btn btn-live" target="_blank">Live Demo</a>
-    <a href="https://github.com/Kouroshca/GAME3023-DevLogs" class="btn btn-github" target="_blank">GitHub</a>
-  </div>
-</div>
-
+    <!-- RPG -->
+    <div class="card project-card">
+      <img src="images/RPG_Game.png" alt="RPG Game" class="project-img" />
+      <h3>Simple RPG Game</h3>
+      <p><strong>Unity, C#</strong></p>
+      <p>RPG-style game featuring combat, inventory systems, and basic AI-driven enemies.</p>
+      <ul>
+        <li>Implemented combat mechanics and player stats system</li>
+        <li>Built inventory and interaction systems</li>
+        <li>Developed basic enemy AI behavior</li>
+        <li>Debugged and tested gameplay features</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://kouroshca.itch.io/game-3023-term-project" class="btn btn-live" target="_blank">Live Demo</a>
+        <a href="https://github.com/Kouroshca/GAME3023-DevLogs" class="btn btn-github" target="_blank">GitHub</a>
+      </div>
+    </div>
 
     <!-- Block Buster -->
     <div class="card project-card">
-  
       <div class="project-gallery">
         <img src="images/IconApp.png" class="project-img" />
         <img src="images/MainMenu.png" class="project-img" />
         <img src="images/GameScreen.png" class="project-img" />
       </div>
-  
       <h3>Block Buster – Mobile Puzzle Game</h3>
       <p><strong>Unity 2D, C#, GitHub</strong></p>
-  
-      <p>
-        Interactive 2D puzzle game featuring grid-based mechanics and player-driven gameplay systems.
-      </p>
-  
+      <p>Interactive 2D puzzle game featuring grid-based mechanics and player-driven gameplay systems.</p>
       <ul>
         <li>Designed 8x8 drag-and-drop grid system</li>
         <li>Implemented core gameplay mechanics and UI flow</li>
         <li>Developed player interaction and game logic systems</li>
         <li>Collaborated using GitHub and task tracking tools</li>
       </ul>
-  
       <div class="project-links">
         <a href="#" class="btn btn-live" target="_blank">Live Demo</a>
         <a href="https://github.com/Kouroshca/BlockBuster" class="btn btn-github" target="_blank">GitHub</a>
         <a href="https://www.youtube.com/watch?v=7MHsJelsw08" class="btn btn-youtube" target="_blank">YouTube</a>
       </div>
-  
     </div>
-  
-   
-  
-    <!-- Mobile Game -->
+
+    <!-- Platformatory -->
     <div class="card project-card">
       <img src="images/Platformatory.png" alt="Mobile Game" class="project-img" />
-  
       <h3>Platformatory – 2D Mobile Platformer</h3>
       <p><strong>Unity, Mobile Development</strong></p>
-  
-      <p>
-        2D platformer mobile game built with touch controls, levels, and enemy interactions.
-      </p>
-  
+      <p>2D platformer mobile game built with touch controls, levels, and enemy interactions.</p>
       <ul>
         <li>Implemented touch-based movement and controls</li>
         <li>Designed levels and collectible systems</li>
         <li>Developed simple enemy AI behaviors</li>
         <li>Collaborated in a team to deliver within one-week deadline</li>
       </ul>
-  
       <div class="project-links">
         <a href="https://kouroshca.itch.io/platformatory" class="btn btn-live" target="_blank">Live Demo</a>
         <a href="https://github.com/DylanH121/GAME2014-Assignment-2" class="btn btn-github" target="_blank">GitHub</a>
       </div>
     </div>
-  
+
   </section>
 
-    <!-- ============ SKILLS ============ -->
-    <section id="skills" class="section">
-      <div class="skills-category">
-        <h3>Programming Languages</h3>
-        <div class="skills-grid">
-          <div class="skill-card">Python</div>
-          <div class="skill-card">C++</div>
-          <div class="skill-card">C</div>
-          <div class="skill-card">C#</div>
-        </div>
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+
+    <div class="skills-category">
+      <h3>Cybersecurity & SIEM</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Splunk</div>
+        <div class="skill-card">SPL</div>
+        <div class="skill-card">Wireshark</div>
+        <div class="skill-card">Scapy</div>
+        <div class="skill-card">MITRE ATT&CK</div>
+        <div class="skill-card">IDS / IPS</div>
+        <div class="skill-card">Network Analysis</div>
+        <div class="skill-card">Threat Detection</div>
       </div>
-    
-      <div class="skills-category">
-        <h3>Game Engines</h3>
-        <div class="skills-grid">
-          <div class="skill-card">Unity 2D / 3D</div>
-          <div class="skill-card">Unreal Engine 4 / 5</div>
-        </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Programming Languages</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">C++</div>
+        <div class="skill-card">C</div>
+        <div class="skill-card">C#</div>
+        <div class="skill-card">SQL</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
       </div>
-    
-      <div class="skills-category">
-        <h3>Concepts</h3>
-        <div class="skills-grid">
-          <div class="skill-card">Data Structures & Algorithms</div>
-          <div class="skill-card">Object-Oriented Programming</div>
-          <div class="skill-card">System Design</div>
-          <div class="skill-card">Problem Solving</div>
-        </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>IT & Systems</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Linux CLI</div>
+        <div class="skill-card">PowerShell</div>
+        <div class="skill-card">Active Directory</div>
+        <div class="skill-card">Technical Support</div>
+        <div class="skill-card">Hardware Troubleshooting</div>
+        <div class="skill-card">QA & Testing</div>
+        <div class="skill-card">Documentation</div>
+        <div class="skill-card">Ticketing Systems</div>
       </div>
-    
-      <div class="skills-category">
-        <h3>Tools</h3>
-        <div class="skills-grid">
-          <div class="skill-card">Git</div>
-          <div class="skill-card">GitHub</div>
-          <div class="skill-card">GitLab</div>
-          <div class="skill-card">Visual Studio</div>
-          <div class="skill-card">VS Code</div>
-          <div class="skill-card">SQL</div>
-          <div class="skill-card">Trello</div>
-        </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Data & ML</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Pandas</div>
+        <div class="skill-card">Scikit-learn</div>
+        <div class="skill-card">Streamlit</div>
+        <div class="skill-card">Data Analysis</div>
       </div>
-    
-      <div class="skills-category">
-        <h3>Web Technologies</h3>
-        <div class="skills-grid">
-          <div class="skill-card">HTML</div>
-          <div class="skill-card">CSS</div>
-          <div class="skill-card">Java Script</div>
-        </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Game Engines</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Unity 2D / 3D</div>
+        <div class="skill-card">Unreal Engine 4 / 5</div>
       </div>
-    </section>
+    </div>
+
+    <div class="skills-category">
+      <h3>Tools & Concepts</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Git</div>
+        <div class="skill-card">GitHub</div>
+        <div class="skill-card">GitLab</div>
+        <div class="skill-card">Visual Studio</div>
+        <div class="skill-card">VS Code</div>
+        <div class="skill-card">Trello</div>
+        <div class="skill-card">OOP</div>
+        <div class="skill-card">Data Structures & Algorithms</div>
+      </div>
+    </div>
+
+  </section>
 
   <!-- ============ EXPERIENCE ============ -->
   <section id="experience" class="section">
-    <h2>Experiences</h2>
+    <h2>Experience</h2>
 
     <div class="card">
-      <h3>Game Programmer Intern</h3>
-      <p><strong>Student Association at George Brown College</strong> | June 2025 – April 2026</p>
-      <P> (The game is still in development phase)</P>
+      <h3>IT Support & QA Technician (Intern)</h3>
+      <p><strong>Student Association, George Brown College</strong> | July 2025 – April 2026</p>
       <ul>
-        <li>Developed AI-based systems for NPCs and objects</li>
-        <li>Applied data structures and algorithms to gameplay systems</li>
-        <li>Collaborated in iterative development and testing cycles with a team of designers and programmers</li>
-        <li>Responsible for implementing and testing gameplay mechanics and producing the game for the college</li>
+        <li>Provided technical support and troubleshooting assistance to staff and members, resolving hardware and software issues in a fast-paced environment</li>
+        <li>Conducted structured QA testing across multiple software builds, identifying and documenting bugs using issue-tracking workflows in Trello and GitHub</li>
+        <li>Collaborated with development teams to reproduce edge-case failures, improving software stability across release cycles</li>
+        <li>Supported onboarding of new tools and systems, creating documentation to help non-technical users adopt new software</li>
+        <li>Applied data structures and algorithms to gameplay and application systems throughout iterative development cycles</li>
       </ul>
     </div>
+
     <div class="card">
       <h3>Resident Advisor</h3>
-      <p><strong>Campus Living Centers</strong> | August 2024 – April 2025</p>
+      <p><strong>Campus Living Centres</strong> | August 2024 – April 2025</p>
       <ul>
-        <li>Planned and organized events to foster community engagement</li>
-        <li>Acted as a point of communication between residents and management</li>
-        <li>Resolved issues and documented procedures clearly</li>
-        <li>Collaborated with teammates in weekly meetings</li>
+        <li>Planned and organized events to foster community engagement among residents</li>
+        <li>Acted as point of contact between residents and management, resolving issues and documenting procedures clearly</li>
+        <li>Collaborated with teammates in weekly meetings to coordinate building operations</li>
       </ul>
     </div>
   </section>
-
 
   <!-- ============ CERTIFICATES ============ -->
   <section id="certificates" class="section">
     <h2>Certificates</h2>
 
     <div class="card">
-        <h3>Google Cybersecurity</h3>
-        <p>Coursera | 2025</p>
-        <a href="GoogleCyberseucrityCertifiacton.pdf" target="_blank">View Certificate (PDF)</a>
+      <h3>Google Cybersecurity Certificate</h3>
+      <p>Google / Coursera | 2025</p>
+      <a href="GoogleCyberseucrityCertifiacton.pdf" target="_blank">View Certificate (PDF)</a>
     </div>
 
     <div class="card">
-        <h3>SOC Level 1</h3>
-        <p>TryHackMe | 2026</p>
-        <a href="https://tryhackme.com/p/kalatiank" target="_blank">View Profile</a>
+      <h3>Intro to Splunk</h3>
+      <p>Splunk Education | 2026</p>
+      <a href="Splunk.pdf" target="_blank">View Certificate</a>
     </div>
 
     <div class="card">
-        <h3>Intro to Splunk</h3>
-        <p>Splunk | 2026</p>
-        <a href="Splunk.pdf" target="_blank">View Certificate</a>
+      <h3>SOC Level 1</h3>
+      <p>TryHackMe | 2026</p>
+      <a href="https://tryhackme.com/p/kalatiank" target="_blank">View Profile</a>
     </div>
 
     <div class="card">
-        <h3>First Aid & CPR</h3>
-        <p>2024</p> 
-        <a href="Firstaid_CPR.pdf" target="_blank">View Certificate (PDF)</a>
+      <h3>Pandas Library</h3>
+      <p>Kaggle | 2026</p>
     </div>
 
-</section>
+    <div class="card">
+      <h3>First Aid & CPR-C</h3>
+      <p>2024</p>
+      <a href="Firstaid_CPR.pdf" target="_blank">View Certificate (PDF)</a>
+    </div>
+
+  </section>
+
   <!-- ============ EDUCATION ============ -->
-<section id="education" class="section">
-  <h2>Education</h2>
+  <section id="education" class="section">
+    <h2>Education</h2>
 
-  <div class="card">
-    <h3>Game Programming Advanced Diploma</h3>
-    <p><strong>George Brown College - Toronto</strong> | 2023 – 2026</p>
-    <ul>
-      <li>Focused on game development, AI systems, and gameplay programming</li>
-      <li>Hands-on software development, quality assurance, and full SDLC implementation</li>
-      <li>Hands-on experience with Unity, Unreal Engine, and C++, C# and openGL</li>
-      <li>Studied data structures, algorithms, and software development practices</li>
-    </ul>
-  </div>
-</section>
+    <div class="card">
+      <h3>Game Programming Advanced Diploma</h3>
+      <p><strong>George Brown College – Toronto</strong> | 2023 – 2026 | GPA: 3.32 / 4.0</p>
+      <ul>
+        <li>Studied software engineering fundamentals: algorithms, data structures, OOP, and full SDLC</li>
+        <li>Hands-on experience with quality assurance, debugging, and software testing practices</li>
+        <li>Built AI systems, gameplay mechanics, and security tools across multiple shipped projects</li>
+        <li>Tools and languages: Python, C++, C#, Unity, Unreal Engine, OpenGL, Git</li>
+      </ul>
+    </div>
+  </section>
 
-<!-- ============ LANGUAGES ============ -->
-<section id="languages" class="section">
-  <h2>Languages</h2>
-
-  <div class="card">
-    <ul>
-      <li><strong>English</strong> – Fluent</li>
-      <li><strong>Persian (Farsi)</strong> – Native</li>
-      <li><strong>French</strong> – Basic</li>
-    </ul>
-  </div>
-</section>
+  <!-- ============ LANGUAGES ============ -->
+  <section id="languages" class="section">
+    <h2>Languages</h2>
+    <div class="card">
+      <ul>
+        <li><strong>English</strong> – Fluent</li>
+        <li><strong>Persian (Farsi)</strong> – Native</li>
+        <li><strong>French</strong> – Basic</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- ============ CONTACT ============ -->
   <section id="contact" class="section">
     <h2>Contact</h2>
-
     <div class="card">
       <p>📧 Email: <a href="mailto:kalatiank@gmail.com">kalatiank@gmail.com</a></p>
       <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/kourosh-kalatian-692818271/" target="_blank">View Profile</a></p>
