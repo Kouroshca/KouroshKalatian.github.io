@@ -114,7 +114,24 @@
     <div class="section-divider">
       <h3>Cybersecurity & AI Projects</h3>
     </div>
-
+    <!-- IP Threat Enrichment Tool -->
+<div class="card project-card">
+  <img src="images/IpThreat-tool.png" alt="IP Threat Enrichment Tool" class="project-img" />
+  <h3>IP Threat Enrichment Tool</h3>
+  <p><strong>Python, VirusTotal API, AbuseIPDB, Jinja2, Pandas</strong></p>
+  <p>
+    Automated SOC triage tool that enriches suspicious IPs using dual threat intelligence sources and generates analyst-ready HTML reports.
+  </p>
+  <ul>
+    <li>Queried VirusTotal and AbuseIPDB simultaneously to auto-classify IPs as Malicious, Suspicious, or Clean using configurable thresholds</li>
+    <li>Generated dark-themed HTML triage reports with ISP data, abuse confidence scores, vendor flags, and recommended firewall actions</li>
+    <li>Integrated as enrichment layer for the Python IDS project — creating an end-to-end threat detection and triage pipeline</li>
+    <li>Ingests IP lists from log files, CSV exports, or Splunk alert outputs</li>
+  </ul>
+  <div class="project-links">
+    <a href="https://github.com/Kouroshca/ip-threat-enrichment" class="btn btn-github" target="_blank">GitHub</a>
+  </div>
+</div>
     <!-- IDS Project -->
     <div class="card project-card">
       <img src="images/PythonIDS-Splunk copy.png" alt="Python Intrusion Detection System" class="project-img" />
